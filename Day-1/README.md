@@ -4,7 +4,7 @@
 ## 📘 Blog Reference (Day 01)
 A detailed explanation of my Day 01 learning is available on my Medium Blog:
 
-👉 [Blog Link: ](https://medium.com/@ars0a/day-1-of-30-days-of-aws-terraform-understanding-the-basics-before-writing-code-3a854739a034)
+👉 Blog link: [Click Here](https://medium.com/@ars0a/day-1-of-30-days-of-aws-terraform-understanding-the-basics-before-writing-code-3a854739a034)
 
 ---
 
@@ -163,6 +163,6 @@ This configuration specifies AWS as the provider and defines the region where re
 
 - Day 01 focuses on concepts rather than provisioning resources
 
-### Challenge Reference
+## Challenge Reference
 
 This work is part of the 30 Days of AWS Terraform challenge by Piyush Sachdeva.
