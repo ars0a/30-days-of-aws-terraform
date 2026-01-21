@@ -2,9 +2,9 @@
 #30DaysOfAWSTerraform
 
 ## 📘 Blog Reference (Day 01)
-A detailed explanation of my Day 01 learning is available here:
+A detailed explanation of my Day 01 learning is available on my Medium Blog:
 
-👉 https://medium.com/@ars0a/day-1-of-30-days-of-aws-terraform-understanding-the-basics-before-writing-code-3a854739a034
+👉 [Blog Link: ](https://medium.com/@ars0a/day-1-of-30-days-of-aws-terraform-understanding-the-basics-before-writing-code-3a854739a034)
 
 ---
 
