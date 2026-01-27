@@ -63,15 +63,13 @@ A Terraform module is simply a folder containing Terraform files.
 
 ## 🔧 Root Module Files (Day-6) ##
 
-[providers.tf](/home/aditya/Documents/30-Days-Of-Terraform/Day-6/providers.tf)
+[providers.tf](Day-6/providers.tf)
 
-----
 
-[variables.tf](/home/aditya/Documents/30-Days-Of-Terraform/Day-6/variables.tf)
+[variables.tf](Day-6/variables.tf)
 
-----
 
-[locals.tf](/home/aditya/Documents/30-Days-Of-Terraform/Day-6/locals.tf)
+[locals.tf](Day-6/locals.tf)
 
 **Why locals?**
 
@@ -81,20 +79,17 @@ A Terraform module is simply a folder containing Terraform files.
 
 - Safer refactoring
 
-----
 
-[main.tf](/home/aditya/Documents/30-Days-Of-Terraform/Day-6/main.tf)
+[main.tf](Day-6/main.tf)
 
 This is where composition happens.
 The root module orchestrates infrastructure using child modules.
 
-----
 
-[output.tf](/home/aditya/Documents/30-Days-Of-Terraform/Day-6/output.tf)
+[output.tf](Day-6/output.tf)
 
 Outputs expose useful data to users or automation.
 
----
 
 ## 🧩 VPC Module (modules/vpc) ##
 
