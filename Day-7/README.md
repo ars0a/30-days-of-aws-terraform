@@ -1,6 +1,6 @@
 # Day 7: Type Constraints in Terraform
 
-[Blog Link]()
+[Blog Link](https://medium.com/@ars0a/day-7-of-30daysofterraform-managing-multiple-environments-with-terraform-workspaces-d43efd6bfb3c)
 
 ## Topics Covered
 - String, number, bool types
