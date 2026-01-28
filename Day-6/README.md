@@ -2,7 +2,7 @@
 
 #30DaysOfTerraform
 
-Blog Link: [Click Here]()
+Blog Link: [Click Here](https://medium.com/@ars0a/day-6-of-30daysofterraform-thinking-in-modules-not-files-d926a0e5a4bc)
 
 ---
 
@@ -75,7 +75,7 @@ A Terraform module is simply a folder containing Terraform files.
 
 - Avoid repeated values
 
-- Centralize shared logic
+- Centralize shared logic 
 
 - Safer refactoring
 

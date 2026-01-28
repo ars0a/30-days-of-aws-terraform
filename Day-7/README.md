@@ -1,5 +1,7 @@
 # Day 7: Type Constraints in Terraform
 
+[Blog Link]()
+
 ## Topics Covered
 - String, number, bool types
 - Map, set, list, tuple, object types
