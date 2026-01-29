@@ -1,0 +1,10 @@
+users:
+  - username: Aditya
+    policies:
+      - AdministratorAccess
+  - username: Priya
+    policies:
+      - ReadOnlyAccess
+  - username: Rahul
+    policies:
+      - AmazonS3FullAccess
