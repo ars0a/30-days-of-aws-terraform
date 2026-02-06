@@ -15,7 +15,7 @@ provider "aws" {
 # Create a VPC
 resource "aws_vpc" "example" {
   cidr_block = "10.0.0.0/16"
-  tags = {                                     #updated after first tf apply
+  tags = {                                     #updated after first tf apply to check statefile comparison
     Name        = "day3-vpc"
     Environment = "Dev"
     ManagedBy   = "Terraform"

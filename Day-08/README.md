@@ -2,7 +2,9 @@
 
 Welcome to Day 08 of the Terraform AWS Course! This lesson provides **comprehensive coverage of all Terraform meta-arguments** with simple, practical examples.
 
-## 📚 What You'll Learn
+Blog Link: [Click Here]()
+
+## 📚 What I have covered and Learned
 
 - Understanding all Terraform meta-arguments
 - **count** - Create multiple resources with numeric indexing

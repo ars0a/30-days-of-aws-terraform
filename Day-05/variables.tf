@@ -1,4 +1,5 @@
 # Input Variables - Values provided to Terraform configuration
+
 variable "environment" {
   description = "Environment name"
   type        = string
