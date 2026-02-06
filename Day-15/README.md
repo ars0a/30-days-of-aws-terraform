@@ -2,7 +2,7 @@
 
 ## Overview
 
-Blog Link: [click here](https://github.com/ars0a/30-Days-Of-Terraform.git)
+Blog Link: [click here](https://medium.com/@ars0a/day-15-of-30-days-of-aws-terraform-building-cross-region-vpc-peering-from-scratch-a47fca8ef312)
 
 On Day 15 of the **#30DaysOfAWSTerraform** challenge, I completed a hands-on mini project focused on **AWS VPC Peering** using Terraform.
 
