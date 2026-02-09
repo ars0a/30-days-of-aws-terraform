@@ -1,5 +1,11 @@
 # 🚀 Day 17 – Blue-Green Deployment using Terraform (AWS Elastic Beanstalk)
 
+---
+
+
+Blog [click here](https://medium.com/@ars0a/implementing-blue-green-deployment-with-terraform-on-aws-elastic-beanstalk-580141c65694)
+
+---
 
 ## 📌 Project Overview
 
@@ -22,6 +28,8 @@ Instead of redeploying or replacing infrastructure, traffic is swapped at the DN
 
 - Rollback is just another traffic swap
 
+---
+
 ### Why it matters
 
 - Zero downtime
@@ -31,6 +39,8 @@ Instead of redeploying or replacing infrastructure, traffic is swapped at the DN
 - Reduced deployment risk
 
 - Production-grade release strategy
+
+---ss
 
 ## 🏗️ Architecture Overview
 
