@@ -118,6 +118,8 @@ resource "aws_route_table_association" "primary_rta" {
   route_table_id = aws_route_table.primary_rt.id
 }
 
+
+
 # Associate route table with Secondary subnet
 resource "aws_route_table_association" "secondary_rta" {
   provider       = aws.secondary

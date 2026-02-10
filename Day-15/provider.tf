@@ -9,11 +9,11 @@ terraform {
 
 # Configure the AWS Provider
 provider "aws" {
-  region = "us-east-1"
+  region = var.primary_region
   alias = "primary"
 }
 
 provider "aws" {
-  region = "us-west-2"
+  region = var.secondary_region
   alias = "secondary"
 }
