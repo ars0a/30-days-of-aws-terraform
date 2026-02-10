@@ -1,6 +1,9 @@
-# Simple Image Processor - Backend Only
+# Image Processing Serverless Project using AWS Lambda and Terraform
 
-A simplified serverless image processing pipeline that automatically processes images uploaded to S3.
+Blog: [click here](https://medium.com/@ars0a/day-18-of-30daysofawsterraform-building-an-image-processing-pipeline-with-aws-lambda-and-ef0742a3e648)
+
+## Overview
+This project demonstrates a fully serverless image processing pipeline deployed on AWS using Terraform as Infrastructure as Code (IaC). It processes images uploaded to an S3 bucket by automatically generating multiple variants (e.g., resized versions in JPEG and WebP formats) via an AWS Lambda function. The setup is event-driven: uploading an image to the source bucket triggers the Lambda, which handles resizing, optimization, and saving outputs to a destination bucket.
 
 ## 🎯 Architecture
 
