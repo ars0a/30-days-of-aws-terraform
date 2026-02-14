@@ -1,13 +1,26 @@
-# Day 22: RDS Database (Mini Project 8)
+# Day 22: 2-Tier AWS Architecture with Terraform
+
+Blog: [click here:][https://medium.com/@ars0a/building-my-first-secure-2-tier-aws-web-application-with-terraform-a-beginners-journey-through-e54bf5d8db63]
 
 ## Overview
 
-This project demonstrates deploying a complete web application stack on AWS using Terraform with a modular architecture. The infrastructure includes:
+Day-22 contains Terraform code to provision a secure 2-tier architecture on AWS. It sets up a custom VPC with public and private subnets, deploys a Flask web application on an EC2 instance in the public subnet, and connects it to a MySQL RDS database in private subnets. The setup emphasizes security best practices, modular design, and automated deployment.
 
-- **VPC** with public and private subnets
-- **EC2 Instance** running a Flask web application on Ubuntu
-- **RDS MySQL Database** in private subnets for secure database access
-- **Security Groups** to control network access
+The project is part of my #30DaysOfTerraform challenge, where I'm learning Cloud and DevOps hands-on. I built this step by step, incorporating lessons from mistakes like missing route table associations and hardcoded credentials.
+
+**Key features:**
+
+- Custom VPC for network isolation
+- Public subnet for EC2 (web tier)
+- Two private subnets for RDS (database tier, Multi-AZ compliant)
+- Internet Gateway and route tables for public access
+- Security groups for layered isolation (web allows HTTP from anywhere; DB only from web SG)
+- AWS Secrets Manager for random password generation and secure storage
+- Modular Terraform structure with outputs for dependency management
+- EC2 user data script to deploy Flask app, including DB connection retries and systemd service
+- Flask endpoints: /health for DB check, /db-info for database details, and /post for message insertion
+
+This mimics real-world DevOps setups: infrastructure as code, secure by default, and application-integrated.
 
 ## Architecture
 
@@ -32,36 +45,40 @@ This project demonstrates deploying a complete web application stack on AWS usin
            │
            ▼
       Internet (Users)
+    
 ```
 
 ## Project Structure
 
 ```
-day22/
-├── main.tf                          # Root module - orchestrates all modules
-├── variables.tf                     # Root variables
-├── outputs.tf                       # Root outputs
-├── terraform.tfvars.example         # Example variable values
-├── README.md                        # This file
-└── modules/
-    ├── vpc/                         # VPC Module
-    │   ├── main.tf
-    │   ├── variables.tf
-    │   └── outputs.tf
-    ├── security_groups/             # Security Groups Module
-    │   ├── main.tf
-    │   ├── variables.tf
-    │   └── outputs.tf
-    ├── rds/                         # RDS Module
-    │   ├── main.tf
-    │   ├── variables.tf
-    │   └── outputs.tf
-    └── ec2/                         # EC2 Module
-        ├── main.tf
-        ├── variables.tf
-        ├── outputs.tf
-        └── templates/
-            └── user_data.sh         # EC2 bootstrap script
+.
+├── main.tf               # Root module orchestrating everything
+├── variables.tf          # Global variables
+├── outputs.tf            # Root-level outputs (e.g., EC2 public DNS, RDS endpoint)
+├── modules/
+│   ├── vpc/
+│   │   ├── main.tf       # VPC, subnets, IGW, route tables
+│   │   ├── variables.tf
+│   │   └── outputs.tf    # Exports subnet IDs, VPC ID
+│   ├── security_groups/
+│   │   ├── main.tf       # Web and DB security groups
+│   │   ├── variables.tf
+│   │   └── outputs.tf    # Exports SG IDs
+│   ├── secrets/
+│   │   ├── main.tf       # Random password and Secrets Manager
+│   │   ├── variables.tf
+│   │   └── outputs.tf    # Exports DB password (sensitive)
+│   ├── rds/
+│   │   ├── main.tf       # RDS instance and subnet group
+│   │   ├── variables.tf
+│   │   └── outputs.tf    # Exports DB endpoint
+│   └── ec2/
+│       ├── main.tf       # EC2 instance with dynamic AMI
+│       ├── variables.tf
+│       ├── outputs.tf    # Exports instance public DNS
+│       └── templates/
+│           └── user_data.sh.tpl  # Templated user data script
+└── README.md             # This file
 ```
 
 ## Prerequisites
